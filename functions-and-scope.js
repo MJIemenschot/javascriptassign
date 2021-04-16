@@ -14,7 +14,42 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
-// ---- Verwachte uitkomst: 6
+// ---- Verwachte uitkomst
+console.log(grades.length);
+
+/*function isCumlaude(grades[]){
+    for (let i = 0; i < grades.length; i++){
+        if (grades[i] >=8) {
+
+            return (grades[i]);
+        }
+    }
+}*/
+
+
+
+
+
+ for (let j = 0; j < grades.length; j++){
+    if (grades[j] >=8) {
+     const highGrade = grades[j];
+     //console.log(highGrade.length);
+
+      console.log(highGrade.length);
+    }
+}
+ /*let cumLaude = (grades[i] >= 8);
+ console.log(cumLaude);
+function isCumLaude(grades){
+    for (let i = 0; i < grades.length; i++){
+       if (grades[i] >=8){
+           return true;
+       }
+}
+}*/
+
+
+
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
