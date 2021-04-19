@@ -50,10 +50,7 @@ function cumlaude(grades) {
 cumlaude(9, 7, 8, 6, 4, 6, 9, 10, 8);
 cumlaude(4, 5, 6,7);
 cumlaude(9, 4, 6, 10);
-//arrow functie
-//let countHighGrades = (grades) => {
 
-//}
 
 
 //Met filter methode lukt het wel
@@ -61,17 +58,7 @@ const result = grades.filter(i => i >= 8).length;
 console.log("Het aantal studenten met een cijfer hoger dan 8 is " + result);
 
 
-   /* let isCumlaude2 = (grades) => {
-        for (let i = 0; i < grades.length; i++){
-            if (grades[i] >=8) total++;
 
-        }console.log(total);
-    }
-   isCumlaude2();
-
-
-   // const cumlaudeStudents = isCumlaude2(9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6);
-   // console.log("Het aantal studenten met hoge cijfers; " + cumlaudeStudents);*/
 
 
 

@@ -31,7 +31,6 @@ console.log(wiersma);
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
-
 function typeOfMail(domain){
     if (domain.includes("@novi-education.nl")){
         console.log("Student");
