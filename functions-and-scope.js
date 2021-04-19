@@ -58,10 +58,6 @@ const result = grades.filter(i => i >= 8).length;
 console.log("Het aantal studenten met een cijfer hoger dan 8 is " + result);
 
 
-
-
-
-
 /* Opdracht  2: Gemiddeld cijfer */
 
 /* 2a: Script schrijven  */
