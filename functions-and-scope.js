@@ -14,42 +14,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
-// ---- Verwachte uitkomst
+// ---- Verwachte uitkomst 6
+//totaal aantal cijfers:
 console.log(grades.length);
 
-/*function isCumlaude(grades[]){
-    for (let i = 0; i < grades.length; i++){
-        if (grades[i] >=8) {
+//totaal aantal hoge cijfers
+let totalHighGrades = 0;
 
-            return (grades[i]);
-        }
-    }
-}*/
-
-
-
-
-
- for (let j = 0; j < grades.length; j++){
-    if (grades[j] >=8) {
-     const highGrade = grades[j];
-     //console.log(highGrade.length);
-
-      console.log(highGrade.length);
-    }
-}
- /*let cumLaude = (grades[i] >= 8);
- console.log(cumLaude);
-function isCumLaude(grades){
-    for (let i = 0; i < grades.length; i++){
-       if (grades[i] >=8){
-           return true;
-       }
-}
-}*/
-
-
-
+for (let i = 0; i < grades.length; ++i) {
+    if (grades[i] >= 8)
+        totalHighGrades++;
+} console.log(totalHighGrades);
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -62,6 +37,41 @@ function isCumLaude(grades){
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+//Deze functie krijg ik niet goed werkend
+
+function cumlaude(grades) {
+    let count = 0;
+    for (i = 0; i < grades.length; ++i) {
+        if (grades[i] >= 8)
+            count++;
+        }console.log("Vergeet deze studenten niet: " + count);
+
+}
+cumlaude(9, 7, 8, 6, 4, 6, 9, 10, 8);
+cumlaude(4, 5, 6,7);
+cumlaude(9, 4, 6, 10);
+//arrow functie
+//let countHighGrades = (grades) => {
+
+//}
+
+
+//Met filter methode lukt het wel
+const result = grades.filter(i => i >= 8).length;
+console.log("Het aantal studenten met een cijfer hoger dan 8 is " + result);
+
+
+   /* let isCumlaude2 = (grades) => {
+        for (let i = 0; i < grades.length; i++){
+            if (grades[i] >=8) total++;
+
+        }console.log(total);
+    }
+   isCumlaude2();
+
+
+   // const cumlaudeStudents = isCumlaude2(9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6);
+   // console.log("Het aantal studenten met hoge cijfers; " + cumlaudeStudents);*/
 
 
 
@@ -76,12 +86,43 @@ function isCumLaude(grades){
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+let sum = 0;
+for(let x = 0; x < grades.length; x++) {
+    sum = sum + grades[x];
+}
+average = sum / grades.length;
+console.log("Het gemiddelde cijfer is: " + average);
+//de volgende methode werkt hier niet zoals ik verwacht
+console.log("Het gemiddelde afgerond op 2 decimalen " + (average));
+console.log("Het gemiddelde cijfer afgerond: " + Math.round(average) / 1);
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+//Deza functie krijg ik helaas weer niet werkend
+function averageGrade(grades) {
+    let sum = 0;
+    for(let x = 0; x < grades.length; x++) {
+        sum += grades[x];
+    }
+    return sum / grades.length;
+
+}
+let calculateAverage = averageGrade(9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6);
+console.log(calculateAverage);
+
+
+//probeersel
+let getal1 = 543.28 - 451.67;
+
+function afr(getal){
+    return Math.round((getal)*100)/100;
+}
+console.log(afr(getal1));
+
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -107,12 +148,32 @@ function isCumLaude(grades){
 
 // ---- Verwachte uitkomst: 9
 
+    let bestGrade = grades[0];
+    for (let j = 1; j < grades.length; j++) {
+       if (grades[j] > bestGrade) {
+           bestGrade = grades[j];
+       }
+    }
+console.log("Het hoogste cijfer is: " + bestGrade);
+
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 
+//Deza functie krijg ik helaas weer niet werkend
+function highestGrade(grades) {
+    let max = grades[0];
+    for (let x = 1; x < grades.length; x++) {
+
+        if (grades[x] > max)
+            max = grades[x];
+    }
+    return max;
+}
+let maxGrade = highestGrade(9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6);
+console.log(maxGrade);
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
